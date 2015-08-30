@@ -1,0 +1,68 @@
+.px2px(@name, @px){ 
+    @{name}: round(@px / 2) * 1px; 
+    [data-dpr="2"] & { 
+        @{name}: @px * 1px; 
+    } 
+    // for mx3 
+    [data-dpr="2.5"] & { 
+        @{name}: round(@px * 2.5 / 2) * 1px; 
+    } 
+    // for 小米note 
+    [data-dpr="2.75"] & { 
+        @{name}: round(@px * 2.75 / 2) * 1px; 
+    } 
+    [data-dpr="3"] & { 
+        @{name}: round(@px / 2 * 3) * 1px 
+    } 
+    // for 三星note4 
+    [data-dpr="4"] & { 
+        @{name}: @px * 2px; 
+    } 
+}
+.first-part {
+    height: 304/64rem;
+    text-align: center;
+    background: #fbf6eb;
+    border-bottom: 1px solid #e6ccb5;
+    img {
+        margin: 60/64rem 0 0 0;
+    }
+    p {
+        margin: 40/64rem 0 60/64rem 0;
+        .px2px(font-size,24);
+        .px2px(line-height,24);
+        color: #4A4A4A;
+    }
+}
+.second-part {
+    padding: 40/64rem 30/64rem 30/64rem;
+    height: 100px;
+    div {
+        position: relative;
+        margin-left: 45/108rem;
+    }
+    .info {
+        margin-top: 36/64rem;
+    }
+    span {
+        position: absolute;
+        left: -45/64rem;
+        top: 8/64rem;
+        width: 12/64rem;
+        height: 12/64rem;
+        background: #737273;
+        border-radius: 50%;
+    }
+    p {
+        margin: 0 0;
+        color: #A5A5A5;
+        text-align: left;
+        .px2px(line-height,24);
+    }
+    .second-line {
+        margin-top: 15/64rem;
+    }
+    .special {
+        margin-bottom: 40/64rem;
+    }
+}

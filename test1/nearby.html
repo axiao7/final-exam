@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nearby</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/nearby.css">
+	<script src="js/flexible.js"></script>
+	<script src="js/ajaxObj.js"></script>
+</head>
+<body>
+	<div class="citydeny">
+		<div class="citynoservice">
+     	    <img src="images/sorry1.png">
+     	    <p>当前城市服务还未开通</p>		
+     	</div>
+     	<div class="recommendshops">
+     		推荐附近城市的热门商家
+     	</div>
+	</div>
+	<div class="fullcitydeny">
+		<img src="images/sorry2.png">
+		<p>当前城市服务还未开通</p>
+	</div>
+	<div class="nosuitedshop">
+		<img src="images/sorry2.png">
+		<p>没有找到你要的商家哦</p>
+	</div>
+	<div class="noweekenddis">
+		<img src="images/sorry2.png">
+		<p>抱歉，当前折扣周六.周日不可用</p>
+		<input type="button" value="继续买单">
+	</div>
+	<div id="wrapper">
+		<div class="package">
+			<div class="container">
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">新白鹿餐厅(滨江店)<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均52元</span></p>
+           				<p class="remain-info"><img src="images/zan.png"><span class="friends">3位朋友</span><span class="distance"><100m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">7</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">老北京刷锅<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均55元</span></p>
+           				<p class="remain-info"><img src="images/zan.png"><span class="friends">1位朋友</span><span class="distance"><100m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">7.5</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">新记台式创意菜<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均60元</span></p>
+           				<p class="remain-info"><img src="images/zan.png"><span class="friends">4位朋友</span><span class="distance">115m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">8</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">港丽茶餐厅<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均120元</span></p>
+           				<p class="remain-info"><span class="friends">893人已享</span><span class="distance">230m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">8.5</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">望湘园<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均70元</span></p>
+           				<p class="remain-info"><span class="friends">541人已享</span><span class="distance">500m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">9</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">望湘园<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均70元</span></p>
+           				<p class="remain-info"><span class="friends">541人已享</span><span class="distance">500m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">9</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+           		<div class="shops">
+           			<img class="shop-img" src="images/food-img.png">
+           			<div class="info">
+           				<p class="shop-name">望湘园<span class="certificate"><img src="images/qiang.png"><img src="images/xue.png"><img src="images/pingpai.png"></span></p>
+           				<p class="average-cost"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/full-star.png"><img src="images/half-star.png"><span>人均70元</span></p>
+           				<p class="remain-info"><span class="friends">541人已享</span><span class="distance">500m</span></p>
+           			</div>
+           			<div class="discount">
+           				<span class="discount-num">9</span>
+           				<span class="discount-word">折</span>
+           			</div>    		</div>
+        	</div>
+        	<div class="pullup">
+        		下拉加载更多
+        	</div>
+		</div>
+	</div>
+	<script src="js/nearby.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/dragformore.js"></script>
+</body>
+</html>

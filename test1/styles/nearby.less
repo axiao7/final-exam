@@ -1,0 +1,211 @@
+.px2px(@name, @px){ 
+    @{name}: round(@px / 2) * 1px; 
+    [data-dpr="2"] & { 
+        @{name}: @px * 1px; 
+    } 
+    // for mx3 
+    [data-dpr="2.5"] & { 
+        @{name}: round(@px * 2.5 / 2) * 1px; 
+    } 
+    // for 小米note 
+    [data-dpr="2.75"] & { 
+        @{name}: round(@px * 2.75 / 2) * 1px; 
+    } 
+    [data-dpr="3"] & { 
+        @{name}: round(@px / 2 * 3) * 1px 
+    } 
+    // for 三星note4 
+    [data-dpr="4"] & { 
+        @{name}: @px * 2px; 
+    } 
+}
+.citydeny {
+    display: none;
+    border-bottom: 1px solid #f2f2f2;
+    .recommendshops {
+        height: 80/64rem;
+        padding-left: 30/64rem;
+        .px2px(font-size,26);
+        line-height: 80/64rem;
+        color: #A5A5A5;
+    }
+}
+.fullcitydeny {
+    display: none;
+    text-align: center;
+    img {
+        width: 270/64rem;
+        height: 270/64rem;
+        margin-top: 240/64rem;
+    }
+    p {
+        margin-top: 50/64rem;
+        font-family: Arial, "STHeitSC-Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        .px2px(line-height,32px);
+        .px2px(font-size,32px);
+        color: #999;
+    }
+}
+.nosuitedshop {
+    display: none;
+    text-align: center;
+    img {
+        width: 270/64rem;
+        height: 270/64rem;
+        margin-top: 240/64rem;
+    }
+    p {
+        margin-top: 50/64rem;
+        font-family: Arial, "STHeitSC-Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        .px2px(line-height,32px);
+        .px2px(font-size,32px);
+        color: #999;
+    }
+}
+.noweekenddis {
+    display: none;
+    font-family: Arial, "STHeitSC-Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    text-align: center;
+    img {
+        width: 270/64rem;
+        height: 270/64rem;
+        margin-top: 170/64rem;
+    }
+    p {
+        margin: 50/64rem 0 0 0;
+        .px2px(line-height,32px);
+        .px2px(font-size,32px);
+        color: #999;
+    }
+    input {
+        width: 90.625%;
+        height: 86/64rem;
+        margin-top: 60/64rem;
+        background: #00aaee;
+        border-radius: 10/64rem;
+        .px2px(font-size,40);
+        line-height: 86/64rem;
+        color: #fff;
+    }
+}
+.citynoservice {
+    height: 293/64rem;
+    text-align: center;
+    background: #f5f5f9;
+    border-bottom: 1px solid #e5e5e5;
+    img {
+        margin-top: 70/64rem;
+        width: 150/64rem;
+        height: 111/64rem;
+    }
+    p {
+        margin-top: 20/64rem;
+        .px2px(line-height,28);
+        .px2px(font-size,28);
+        color: #A5A5A5;
+    }
+}
+.container {
+    padding-left: 30/64rem;
+    .shops {
+        position: relative;
+        height: 130/64rem;
+        padding: 21/64rem 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .shop-img {
+        float: left;
+        width: 160/64rem;
+        height: 130/64rem;
+    }
+    .info {
+        height: 100%;
+        margin-left: 180/64rem;
+    }
+    .shop-name {
+        margin: 10/64rem 0 0 0;
+        .px2px(line-height,30);
+        .px2px(font-size,30);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        img {
+            width: 28/64rem;
+            height: 28/64rem;
+            margin-left: 8/64rem;
+        }
+        .certificate {
+            position: absolute;
+        }
+    }
+    .average-cost {
+        margin: 17/64rem 0 0 0;
+        line-height: 20/64rem;
+        img {
+            width: 24/64rem;
+            height: 24/64rem;
+            margin-left: 2/64rem;
+        }
+        span {
+            margin-left: 15/64rem;
+        }
+    }
+    .remain-info {
+        margin: 17/64rem 0 0 0;
+        img {
+            float: left;
+            width: 25/64rem;
+            height: 24/64rem;
+        }
+        span {
+            color: #ccc;
+            .px2px(font-size,24);
+        }
+        .friends {
+            margin-left: 12/64rem;
+        }
+        .distance {
+            margin-left: 15/64rem;
+        }
+    }
+    .discount {
+        position: absolute;
+        top: 66/64rem;
+        right: 20/64rem;
+        font-family: Arial, "STHeitSC-Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        font-size: 0;
+        .discount-num {
+            .px2px(font-size,80);
+            color: #F85800;
+        }
+        .discount-word {
+            .px2px(font-size,26);
+            color: #F85800;
+        }
+    }
+}
+#wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    .package {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+    }
+}
+.pullup {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    .px2px(font-size,28);
+    line-height: 40px;
+    text-align: center;
+}
